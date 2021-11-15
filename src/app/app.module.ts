@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 /** Modules End*/
 
 /** Components Start*/
@@ -38,6 +39,7 @@ import { RecipeService } from './recipes/recipe.service';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [ShoppingListService, RecipeService],
