@@ -8,7 +8,7 @@ import { RecipeService } from "../recipes/recipe.service";
 export class DataStorageService{
     constructor(private http: HttpClient, private recipeService: RecipeService){}
 
-    storeRecipes(){
+    storeRecipes(){ 
         const recipes = this.recipeService.getRecipes();
         this.http.put('https://restaurant-menu-26891-default-rtdb.firebaseio.com/recipes.json',recipes)
             .subscribe(response => {console.log(response)});
